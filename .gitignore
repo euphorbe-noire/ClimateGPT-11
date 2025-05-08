@@ -1,0 +1,28 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore environment files
+.env
+
+# Ignore logs and databases
+*.log
+*.sqlite3
+
+# Ignore all node_modules
+node_modules/
+
+# Ignore all logs
+*.log
+
+# Ignore all text files
+*.txt
+
+# Ignore all images
+*.png
+
+# Ignore lasge databases
+fire_data.db

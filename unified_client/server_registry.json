@@ -1,0 +1,67 @@
+{
+    "emissions_server": {
+      "url": "http://127.0.0.1:8000",
+      "description": "Climate emissions data analytics and forecasting server",
+      "capabilities": ["database_queries", "general_knowledge", "forecasting", "visualization"],
+      "keywords": [
+        "emission", "emissions", "co2", "carbon dioxide", "ch4", "methane", "n2o", 
+        "nitrous oxide", "greenhouse gas", "ghg", "hydrofluorocarbons", "hfcs", 
+        "perfluorocarbons", "pfcs", "sulfur hexafluoride", "sf6", "climate", 
+        "carbon", "global warming", "transportation", "energy", "industry", "agriculture", 
+        "forestry", "lulucf", "waste", "fuel", "electric power", "industrial", 
+        "commercial", "residential", "forecast", "predict", "projection", "trend"
+      ],
+      "schema": {
+        "tables": ["Emissions", "Greenhouse_Gases", "Sectors", "Geography", "Fuels"],
+        "time_range": "1990-2022"
+      },
+      "timeout": 600,
+      "retries": 5,
+      "retry_delay": 5
+    },
+    "sea_level_server": {
+    "url": "http://127.0.0.1:8001",
+    "description": "Sea level data analytics server",
+    "capabilities": ["database_queries", "general_knowledge", "visualization"],
+    "keywords": [
+      "sea level", "sea-level", "ocean level", "ocean height", "rising sea", "sea rise", 
+      "coastal flooding", "coastal water", "tide", "tidal", "glacier melt", "ocean", 
+      "ocean levels", "sea levels", "NOAA", "baltic sea", "north sea", "coastal", 
+      "coastline", "flooding", "millimeters", "cm", "inches", "sea"
+    ],
+    "schema": {
+      "tables": ["Global_Change_In_Mean_Sea_Level"],
+      "time_range": "1992-present"
+    },
+    "timeout": 600,
+    "retries": 5,
+    "retry_delay": 5
+  },
+  "fire_data_server": {
+    "url": "http://127.0.0.1:8002",
+    "description": "Fire incidents, wildfire trends, and fire impact analytics server",
+    "capabilities": ["database_queries", "general_knowledge", "visualization"],
+    "keywords": [
+      "fire", "wildfire", "forest fire", "grassfire", "wildland fire", "fire data",
+      "fire incident", "wildfire incident", "fire risk", "fire danger", "fire trend",
+      "burned area", "acres burned", "fire count", "fire size", "hotspots",
+      "smoke", "air quality", "climate fire", "extreme heat", "drought fire",
+      "US fire", "NASA fire", "MODIS", "VIIRS", "satellite fire detection", "climate hazard"
+    ],
+    "schema": {
+      "tables": ["fire_data"],
+      "time_range": "2000-present"
+    },
+    "timeout": 600,
+    "retries": 5,
+    "retry_delay": 5
+  },
+    "climategpt_api": {
+      "url": "https://erasmus.ai/models/climategpt_8b_latest/v1/chat/completions",
+      "description": "General climate knowledge and information service",
+      "keywords": [],
+      "capabilities": ["general_knowledge"],
+      "is_fallback": true,
+      "timeout": 120
+    }
+  }
